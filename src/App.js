@@ -1,9 +1,16 @@
 import { useState , useEffect } from 'react';
 import axios from "axios";
 import './App.css';
+import Contador from './components/Contador';
+import Photo from './components/Photo';
+import Color from './components/Color';
+
 
 function App() {
   const [user, setUser] = useState({});
+
+  const [showColor, setShowColor] = useState(true);
+ 
 
   useEffect(() => {
     const colors = ["#845EC2", "#B39CD0", "#FBEAFF", "#00C9A7", "#C4FCEF"];
@@ -16,12 +23,32 @@ function App() {
   console.log(user);
 
   return (
-    <div className="App">
+  <>
+  <div className="App"> 
+    <div>
       <h1>
         {user.name?.title} {user.name?.first} {user.name?.last}
       </h1>
-      <img src={user.picture?.large} alt="" />
+      <img src={user.picture?.large} alt="Imagen" />
     </div>
+    <br />
+    
+    <Contador />
+    <br />
+    <Photo />
+    <br />
+  
+
+    <div>
+      <button onClick={()=> setShowColor(!showColor)}>Mostrar / Ocultar Color</button>
+      <br />
+      {
+        showColor ? <Color /> : null
+      }
+      
+    </div>
+  </div>
+  </>  
   );
 }
 
