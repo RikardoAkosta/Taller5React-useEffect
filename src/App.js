@@ -6,6 +6,7 @@ import Photo from './components/Photo';
 import Color from './components/Color';
 import ScreenSize from './components/ScreenSize';
 import ChuckNorris from './components/ChuckNorris';
+import Emoji from './components/Emoji';
 
 
 function App() {
@@ -62,6 +63,10 @@ function App() {
     <br />
     <div>
       <ChuckNorris />
+    </div>
+    <br />
+    <div className='emoji'>
+       <Emoji />
     </div>
   </div>
   </>  

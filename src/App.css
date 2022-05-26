@@ -41,3 +41,10 @@
   height: 300px;
   background: yellow
 }
+
+.emoji {
+  font-size: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}

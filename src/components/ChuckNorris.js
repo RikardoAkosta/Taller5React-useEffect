@@ -13,7 +13,11 @@ const ChuckNorris = () => {
 
     }, []);
 
-    console.log(chuck);
+    const changeJoke = () => {
+        axios.get('https://api.chucknorris.io/jokes/random')
+            .then(res => setChuck(res));
+
+    }
 
 
 
@@ -21,6 +25,7 @@ const ChuckNorris = () => {
         <div>
           <h1>chuck</h1> 
           <p>{chuck.data?.value}</p>
+          <button onClick={changeJoke} >Change joke</button>
         </div>
     );
 };
