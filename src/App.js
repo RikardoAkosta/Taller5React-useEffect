@@ -4,12 +4,15 @@ import './App.css';
 import Contador from './components/Contador';
 import Photo from './components/Photo';
 import Color from './components/Color';
+import ScreenSize from './components/ScreenSize';
 
 
 function App() {
   const [user, setUser] = useState({});
 
-  const [showColor, setShowColor] = useState(true);
+  const [showColor, setShowColor] = useState(true);//esto hace parte del componente Color
+
+  const [showScreenSize, setShowScreenSize] = useState(true);
  
 
   useEffect(() => {
@@ -46,6 +49,14 @@ function App() {
         showColor ? <Color /> : null
       }
       
+    </div>
+    <br />
+    <div>
+    <button onClick={()=> setShowScreenSize(!showScreenSize)}>Mostrar el tamaño de la pantalla</button>
+     
+      {
+        showScreenSize ? <ScreenSize /> : null
+      }
     </div>
   </div>
   </>  
