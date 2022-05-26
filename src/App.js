@@ -5,6 +5,7 @@ import Contador from './components/Contador';
 import Photo from './components/Photo';
 import Color from './components/Color';
 import ScreenSize from './components/ScreenSize';
+import ChuckNorris from './components/ChuckNorris';
 
 
 function App() {
@@ -57,6 +58,10 @@ function App() {
       {
         showScreenSize ? <ScreenSize /> : null
       }
+    </div>
+    <br />
+    <div>
+      <ChuckNorris />
     </div>
   </div>
   </>  
